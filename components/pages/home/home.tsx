@@ -12,7 +12,7 @@ export default function Home({ handleSubmit }: Props): ReactElement {
     <S.Wrapper>
       <S.ContentWrapper>
         <S.Content>
-          <S.Title> Lorem Ipsum </S.Title>
+          <S.Title> Aenean Mi Nibh, Autor Laoreet </S.Title>
           <S.Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quae libero deserunt, aspernatur tenetur
             quibusdam a consequatur, minus adipisci non vel fuga officiis pariatur, id nesciunt. Odit distinctio eum

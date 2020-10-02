@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
     src: url("/assets/fonts/Roboto/Roboto-Regular.ttf");
   }
 
+  @font-face {
+    font-family: UniSans;
+    src: url("/assets/fonts/UniSans/UniSansHeavy.otf");
+  }
+
   * {
     box-sizing: border-box;
   }

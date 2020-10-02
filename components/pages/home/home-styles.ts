@@ -28,7 +28,10 @@ export const ContentWrapper = styled.div`
 
 export const Content = styled.div``
 
-export const Title = styled.h1``
+export const Title = styled.h1`
+  font-family: UniSans;
+  font-size: 40px;
+`
 
 export const Text = styled.p``
 
