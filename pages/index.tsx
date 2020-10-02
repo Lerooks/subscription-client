@@ -1,10 +1,6 @@
 import React, { ReactElement } from 'react'
-import BaseLayout from 'layouts/base-layout'
+import Home from 'components/pages/home'
 
 export default function IndexPage(): ReactElement {
-  return (
-    <BaseLayout>
-      <h1> Hello World </h1>
-    </BaseLayout>
-  )
+  return <Home></Home>
 }

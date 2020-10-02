@@ -1,6 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: Roboto;
+    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    font-family: Roboto;
+    background-color: #f2f2f2;
+    height: 100%;
+  }
 
   html {
     line-height: 1.15; 
@@ -181,7 +195,11 @@ const GlobalStyle = createGlobalStyle`
   [hidden] {
     display: none;
   }
-  
+
+  #__next {
+    height: 100%;
+  }
+
 `
 
 export default GlobalStyle

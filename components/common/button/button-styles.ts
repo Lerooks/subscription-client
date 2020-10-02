@@ -14,7 +14,9 @@ export const Button = styled.button<Props>`
   padding: 11px 30px;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: #3d7dca;
     border: 1px solid #3d7dca;
     cursor: pointer;
