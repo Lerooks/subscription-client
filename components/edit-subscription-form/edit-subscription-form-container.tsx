@@ -12,7 +12,7 @@ const initialSubscription: Subscription = {
   note: '',
 }
 
-export default function HomeSubscriptionFormContainer(): ReactElement {
+export default function EditSubscriptionFormContainer(): ReactElement {
   const [subscription, setSubscription] = useState<Subscription>(initialSubscription)
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {

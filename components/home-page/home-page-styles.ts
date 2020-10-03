@@ -41,7 +41,7 @@ export const BannerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #c92c44, 50%, #ea482c);
+  background: linear-gradient(135deg, #e83250, 50%, #ea482c);
   padding: 30px 0;
 
   @media screen and (min-width: 992px) {

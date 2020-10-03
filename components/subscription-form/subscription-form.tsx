@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, ReactElement } from 'react'
 import { Subscription } from 'types/subscription'
 import TextInput from 'components/text-input'
 import Button from 'components/button'
-import * as S from './home-subscription-form-styles'
+import * as S from './subscription-form-styles'
 
 interface Props {
   subscription: Subscription
@@ -32,7 +32,7 @@ export default function HomeSubscriptionForm({ subscription, handleChange, handl
       <S.FormGroup>
         <S.InputGroup>
           <TextInput
-            label="Name"
+            label="Name *"
             name="name"
             value={subscription.name}
             onChange={handleChange}
@@ -43,7 +43,7 @@ export default function HomeSubscriptionForm({ subscription, handleChange, handl
         </S.InputGroup>
         <S.InputGroup>
           <TextInput
-            label="CPF"
+            label="CPF *"
             name="cpf"
             value={subscription.cpf}
             onChange={handleChange}
@@ -54,7 +54,7 @@ export default function HomeSubscriptionForm({ subscription, handleChange, handl
         </S.InputGroup>
         <S.InputGroup>
           <TextInput
-            label="Phone"
+            label="Phone *"
             name="phone"
             value={subscription.phone}
             onChange={handleChange}
@@ -66,7 +66,7 @@ export default function HomeSubscriptionForm({ subscription, handleChange, handl
         </S.InputGroup>
         <S.InputGroup>
           <TextInput
-            label="E-mail"
+            label="E-mail *"
             name="email"
             value={subscription.email}
             onChange={handleChange}
@@ -75,7 +75,7 @@ export default function HomeSubscriptionForm({ subscription, handleChange, handl
         </S.InputGroup>
         <S.InputGroup>
           <TextInput
-            label="Which is your favorite pokemon?"
+            label="Which is your favorite pokemon? *"
             name="favoritePokemon"
             value={subscription.favoritePokemon}
             onChange={handleChange}

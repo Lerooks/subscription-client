@@ -1,5 +1,5 @@
 import React, { FormEvent, ReactElement } from 'react'
-import SubscriptionForm from 'components/home-subscription-form'
+import HomeSubscriptionForm from 'components/home-subscription-form'
 import * as S from './home-page-styles'
 
 export default function Home(): ReactElement {
@@ -13,7 +13,7 @@ export default function Home(): ReactElement {
             quibusdam a consequatur, minus adipisci non vel fuga officiis pariatur, id nesciunt. Odit distinctio eum
             ullam?
           </S.Text>
-          <SubscriptionForm></SubscriptionForm>
+          <HomeSubscriptionForm></HomeSubscriptionForm>
         </S.Content>
       </S.ContentWrapper>
       <S.BannerWrapper>
