@@ -15,10 +15,23 @@ Made with Typescript, NextJS, React, Axios and Styled Components.
 
 ## ⚙️ Running locally
 
+<br />
+
+**The [Pokémon Tournament API](https://github.com/Lerooks/subscription-api) needs to be configured and running to make the client work.**
+
+<br />
+
 Install dependencies
 
 ```bash
 npm install
+```
+
+Config the API URL
+
+```bash
+# .env file
+NEXT_PUBLIC_API_URL=http://localhost:8080/
 ```
 
 Start development server
