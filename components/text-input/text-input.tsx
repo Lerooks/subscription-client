@@ -2,7 +2,7 @@ import React, { InputHTMLAttributes, forwardRef } from 'react'
 import InputMask from 'react-input-mask'
 import * as S from './text-input-styles'
 
-interface Props extends InputHTMLAttributes<HTMLElement> {
+export interface Props extends InputHTMLAttributes<HTMLElement> {
   label?: string
   helper?: string
   error?: boolean
@@ -20,7 +20,7 @@ interface Props extends InputHTMLAttributes<HTMLElement> {
 }
 
 const TextInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { label, helper, mask } = props
+  const { label, helper, mask, error } = props
 
   return (
     <S.Wrapper>

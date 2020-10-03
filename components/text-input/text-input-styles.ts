@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Props } from './text-input'
 
 export const Wrapper = styled.div``
 
@@ -12,7 +13,7 @@ export const Label = styled.label`
   text-transform: uppercase;
 `
 
-export const Input = styled.input`
+export const Input = styled.input<Props>`
   -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: 0.25rem;
@@ -24,6 +25,21 @@ export const Input = styled.input`
   padding: 0.75rem 0.9375rem;
   transition: 0.4s ease;
   width: 100%;
+
+  ${props =>
+    props.error &&
+    `
+    border: 2px solid #c92c44;
+    
+    &:focus {
+      border-radius: 0.25rem;
+      outline: 1px solid #c92c44;
+    }
+
+    ${Helper} {
+      color: #c92c44;
+    }
+  `}
 
   &::placeholder {
     color: #2e2b3f;

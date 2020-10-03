@@ -1,1 +1,1 @@
-export { default } from './home-subscription-form'
+export { default } from './home-subscription-form-container'

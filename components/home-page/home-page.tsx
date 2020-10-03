@@ -2,11 +2,7 @@ import React, { FormEvent, ReactElement } from 'react'
 import SubscriptionForm from 'components/home-subscription-form'
 import * as S from './home-page-styles'
 
-interface Props {
-  handleFormSubmit: (event: FormEvent<HTMLFormElement>) => void
-}
-
-export default function Home({ handleFormSubmit }: Props): ReactElement {
+export default function Home(): ReactElement {
   return (
     <S.Wrapper>
       <S.ContentWrapper>
@@ -17,7 +13,7 @@ export default function Home({ handleFormSubmit }: Props): ReactElement {
             quibusdam a consequatur, minus adipisci non vel fuga officiis pariatur, id nesciunt. Odit distinctio eum
             ullam?
           </S.Text>
-          <SubscriptionForm handleSubmit={handleFormSubmit}></SubscriptionForm>
+          <SubscriptionForm></SubscriptionForm>
         </S.Content>
       </S.ContentWrapper>
       <S.BannerWrapper>
