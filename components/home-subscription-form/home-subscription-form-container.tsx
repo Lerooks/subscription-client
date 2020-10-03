@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FormEvent, ReactElement, useState } from 'react'
 import { Subscription } from 'types/subscription'
 import SubscriptionForm from 'components/subscription-form'
+import api from 'services/api'
 
 const initialSubscription: Subscription = {
   id: null,
@@ -14,9 +15,21 @@ const initialSubscription: Subscription = {
 
 export default function HomeSubscriptionFormContainer(): ReactElement {
   const [subscription, setSubscription] = useState<Subscription>(initialSubscription)
+  const [isLoading, setLoading] = useState(false)
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>): Promise<any> => {
     event.preventDefault()
+    setLoading(true)
+
+    try {
+      await api.saveSubscription(subscription)
+      alert('Saved!')
+      document.location.reload()
+    } catch (error) {
+      alert('There was an error.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -30,6 +43,7 @@ export default function HomeSubscriptionFormContainer(): ReactElement {
 
   return (
     <SubscriptionForm
+      isLoading={isLoading}
       subscription={subscription}
       handleChange={handleChange}
       handleSubmit={handleSubmit}

@@ -5,18 +5,20 @@ import Button from 'components/button'
 import * as S from './subscription-form-styles'
 
 interface Props {
+  isLoading: boolean
   subscription: Subscription
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void
 }
 
-export default function SubscriptionForm({ subscription, handleChange, handleSubmit }: Props): ReactElement {
+export default function SubscriptionForm({ isLoading, subscription, handleChange, handleSubmit }: Props): ReactElement {
   const nameIsValid = subscription.name === null ? true : subscription.name.length > 0
   const cpfIsValid = subscription.cpf === null ? true : /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/.test(subscription.cpf)
   const phoneIsValid = subscription.phone === null ? true : /\(\d{2,}\) \d{4,}\-\d{4}$/.test(subscription.phone)
   const favoritePokemonIsValid = subscription.favoritePokemon === null ? true : subscription.favoritePokemon.length > 0
 
   const isAbleToSubmit =
+    !isLoading &&
     nameIsValid &&
     cpfIsValid &&
     phoneIsValid &&
