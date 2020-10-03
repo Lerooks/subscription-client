@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { Subscription } from 'types/subscription'
 import EditSubscription from 'components/edit-subscription-page'
+import Favicon from 'components/favicon'
 import api from 'services/api'
 
 interface Props {
@@ -14,6 +15,7 @@ export default function EditSubscriptionPage({ subscription }: Props): ReactElem
     <>
       <Head>
         <title> Edit Subscription | Pokémon Tournament </title>
+        <Favicon></Favicon>
       </Head>
       <EditSubscription initalSubscription={subscription}></EditSubscription>
     </>

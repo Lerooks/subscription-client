@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { Subscription } from 'types/subscription'
 import SubscriptionPage from 'components/subscription-page'
+import Favicon from 'components/favicon'
 import api from 'services/api'
 
 type PageProps = {
@@ -14,6 +15,7 @@ export default function SubscriptionsPage({ subscriptions }: PageProps): ReactEl
     <>
       <Head>
         <title> Subscriptions | Pokémon Tournament </title>
+        <Favicon></Favicon>
       </Head>
       <SubscriptionPage subscriptions={subscriptions}></SubscriptionPage>
     </>
