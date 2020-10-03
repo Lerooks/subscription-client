@@ -34,3 +34,11 @@ export const Data = styled.td`
   background-color: #fff;
   padding: 8px;
 `
+
+export const EditIcon = styled.img`
+  max-width: 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
