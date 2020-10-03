@@ -7,4 +7,10 @@ const findAllSubscriptions = async (): Promise<Subscription[]> => {
   return data
 }
 
-export default { findAllSubscriptions }
+const findSubscriptionById = async (id: number): Promise<Subscription> => {
+  const { data }: { data: Subscription } = await client.get(`/api/v1/subscriptions/${id}`)
+
+  return data
+}
+
+export default { findAllSubscriptions, findSubscriptionById }

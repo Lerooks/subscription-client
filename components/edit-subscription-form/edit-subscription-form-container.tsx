@@ -2,18 +2,12 @@ import React, { ChangeEvent, FormEvent, ReactElement, useState } from 'react'
 import { Subscription } from 'types/subscription'
 import SubscriptionForm from 'components/subscription-form'
 
-const initialSubscription: Subscription = {
-  id: null,
-  name: null,
-  cpf: null,
-  email: null,
-  phone: null,
-  favoritePokemon: null,
-  note: '',
+interface Props {
+  initalSubscription: Subscription
 }
 
-export default function EditSubscriptionFormContainer(): ReactElement {
-  const [subscription, setSubscription] = useState<Subscription>(initialSubscription)
+export default function EditSubscriptionFormContainer({ initalSubscription }: Props): ReactElement {
+  const [subscription, setSubscription] = useState<Subscription>(initalSubscription)
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault()

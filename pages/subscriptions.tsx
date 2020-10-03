@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { GetServerSideProps } from 'next'
-import SubscriptionPage from 'components/subscription-page'
 import { Subscription } from 'types/subscription'
+import SubscriptionPage from 'components/subscription-page'
 import api from 'services/api'
 
 type PageProps = {

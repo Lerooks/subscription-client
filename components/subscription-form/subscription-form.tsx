@@ -10,7 +10,7 @@ interface Props {
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void
 }
 
-export default function HomeSubscriptionForm({ subscription, handleChange, handleSubmit }: Props): ReactElement {
+export default function SubscriptionForm({ subscription, handleChange, handleSubmit }: Props): ReactElement {
   const nameIsValid = subscription.name === null ? true : subscription.name.length > 0
   const cpfIsValid = subscription.cpf === null ? true : /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/.test(subscription.cpf)
   const phoneIsValid = subscription.phone === null ? true : /\(\d{2,}\) \d{4,}\-\d{4}$/.test(subscription.phone)

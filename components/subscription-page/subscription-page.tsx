@@ -32,7 +32,7 @@ export default function SubscriptionPage({ subscriptions }: Props): ReactElement
               <S.Data> {subscription.favoritePokemon} </S.Data>
               <S.Data> {subscription.note} </S.Data>
               <S.Data>
-                <Link href="/subscriptions/1">
+                <Link href={`/subscriptions/${subscription.id}`}>
                   <S.EditIcon src="/assets/images/icons/edit-button.svg" title="Edit"></S.EditIcon>
                 </Link>
               </S.Data>
