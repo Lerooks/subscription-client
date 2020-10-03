@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export const Header = styled.header`
   position: absolute;
@@ -43,12 +44,6 @@ export const Menu = styled.ul`
 `
 
 export const MenuItem = styled.li`
-  &:not(:last-of-type) {
-    margin-right: 20px;
-  }
-`
-
-export const Link = styled.a`
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -59,5 +54,14 @@ export const Link = styled.a`
 
   &:hover {
     opacity: 0.75;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `

@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import Link from 'next/link'
 import * as S from './home-header-styles'
 
 export default function HomeHeader(): ReactElement {
@@ -12,10 +13,10 @@ export default function HomeHeader(): ReactElement {
           <S.Nav>
             <S.Menu>
               <S.MenuItem>
-                <S.Link href="/"> Register </S.Link>
+                <Link href="/">Register</Link>
               </S.MenuItem>
               <S.MenuItem>
-                <S.Link href="/"> List of Registers </S.Link>
+                <Link href="/subscriptions"> Subscriptions </Link>
               </S.MenuItem>
             </S.Menu>
           </S.Nav>
