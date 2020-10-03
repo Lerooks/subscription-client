@@ -1,4 +1,4 @@
-<h1 align="center"> Subscription API </h1>
+<h1 align="center"> Subscription Client </h1>
 
 ## ✏️ About
 
@@ -10,7 +10,7 @@ Made with Typescript, NextJS, React, Axios and Styled Components.
 
 <br />
 
-![Image of Yaktocat](/docs/homepage.png)
+![HomePage of Pokémon Tournament](/docs/homepage.png)
 
 
 ## ⚙️ Running locally
