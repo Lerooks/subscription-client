@@ -7,7 +7,7 @@ export default function HomeHeader(): ReactElement {
     <S.Header>
       <S.Container>
         <S.LeftWrapper>
-          <S.Logo src="/assets/images/pokemon/pokemon-logo.svg" alt="Pokemon" title="Pokemon"></S.Logo>
+          <S.Logo src="/assets/images/pokemon/pokemon-logo.svg" alt="Pokémon" title="Pokémon"></S.Logo>
         </S.LeftWrapper>
         <S.RightWrapper>
           <S.Nav>

@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { Subscription } from 'types/subscription'
 import EditSubscription from 'components/edit-subscription-page'
@@ -9,7 +10,14 @@ interface Props {
 }
 
 export default function EditSubscriptionPage({ subscription }: Props): ReactElement {
-  return <EditSubscription initalSubscription={subscription}></EditSubscription>
+  return (
+    <>
+      <Head>
+        <title> Edit Subscription | Pokémon Tournament </title>
+      </Head>
+      <EditSubscription initalSubscription={subscription}></EditSubscription>
+    </>
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<any> => {

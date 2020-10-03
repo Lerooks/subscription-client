@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { Subscription } from 'types/subscription'
 import SubscriptionPage from 'components/subscription-page'
@@ -9,7 +10,14 @@ type PageProps = {
 }
 
 export default function SubscriptionsPage({ subscriptions }: PageProps): ReactElement {
-  return <SubscriptionPage subscriptions={subscriptions}></SubscriptionPage>
+  return (
+    <>
+      <Head>
+        <title> Subscriptions | Pokémon Tournament </title>
+      </Head>
+      <SubscriptionPage subscriptions={subscriptions}></SubscriptionPage>
+    </>
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<any> => {

@@ -6,7 +6,7 @@ export default function Sidebar(): ReactElement {
   return (
     <S.Aside>
       <S.LogoWrapper>
-        <S.Logo src="/assets/images/pokemon/pokemon-logo.svg"></S.Logo>
+        <S.Logo src="/assets/images/pokemon/pokemon-logo.svg" alt="Pokémon"></S.Logo>
       </S.LogoWrapper>
       <S.Nav>
         <S.Menu>
